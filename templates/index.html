@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main class="landing-page">
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <nav class="navbar">
+
+        <div class="nav-links">
+
+            <a href="#about">ABOUT</a>
+
+            <a href="#gallery">GALLERY</a>
+
+            <a href="#contact">CONTACT</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="hero">
+
+        <div class="hero-image"></div>
+
+        <div class="hero-content">
+
+            <h1>PICKLEDUKOL</h1>
+
+            <p>BOOK YOUR PICKLE COURT IN SECONDS</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         BOOKING SECTION
+    ========================================== -->
+
+    <section class="booking-section">
+
+        <div class="pickleball">
+
+            <div class="pickleball-hole hole-1"></div>
+            <div class="pickleball-hole hole-2"></div>
+            <div class="pickleball-hole hole-3"></div>
+            <div class="pickleball-hole hole-4"></div>
+            <div class="pickleball-hole hole-5"></div>
+            <div class="pickleball-hole hole-6"></div>
+
+        </div>
+
+
+        <div class="booking-line"></div>
+
+
+       <a href="{{ url_for('courts') }}" class="book-button">
+         BOOK NOW
+        </a>    
+
+        <div class="arrow">
+            ↗
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         ABOUT SECTION
+    ========================================== -->
+
+    <section id="about" class="about-section">
+
+        <div class="section-content">
+
+            <p class="section-label">
+                ABOUT US
+            </p>
+
+            <h2>
+                PLAY. DUKOL. PICKLE.
+            </h2>
+
+            <p>
+                Welcome to PICKEDUKOL, this is a place to play,
+                connect, and enjoy the game at hawan.
+                dont mind the poop and dogs. learn quickly and easily.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         GALLERY SECTION
+    ========================================== -->
+
+    <!-- =========================================
+     GALLERY SECTION
+========================================= -->
+
+<section id="gallery" class="gallery-section">
+
+    <div class="section-content">
+
+        <p class="section-label">
+            GALLERY
+        </p>
+
+        <h2>
+            OUR COURTS
+        </h2>
+
+
+        <!-- IMAGE SLIDER -->
+
+        <div class="gallery-slider">
+
+            <!-- PREVIOUS BUTTON -->
+
+            <button
+                class="gallery-arrow gallery-prev"
+                id="galleryPrev"
+                aria-label="Previous image">
+
+                ←
+
+            </button>
+
+
+            <!-- IMAGE -->
+
+            <div class="gallery-image-container">
+
+                <img
+                    id="galleryImage"
+                    src="{{ url_for('static', filename='images/gallery/court1.jpg') }}"
+                    alt="Pickleball Court">
+
+            </div>
+
+
+            <!-- NEXT BUTTON -->
+
+            <button
+                class="gallery-arrow gallery-next"
+                id="galleryNext"
+                aria-label="Next image">
+
+                →
+
+            </button>
+
+        </div>
+
+
+        <!-- IMAGE INDICATORS -->
+
+        <div class="gallery-dots" id="galleryDots">
+
+            <button class="gallery-dot active"></button>
+            <button class="gallery-dot"></button>
+            <button class="gallery-dot"></button>
+            <button class="gallery-dot"></button>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- =========================================
+         CONTACT SECTION
+    ========================================== -->
+
+    <section id="contact" class="contact-section">
+
+        <div class="section-content">
+
+            <p class="section-label">
+                CONTACT
+            </p>
+
+            <h2>
+                GET IN TOUCH
+            </h2>
+
+            <p>
+                Have questions about booking?
+                Contact us and we'll be happy to help.
+            </p>
+
+
+            <div class="contact-info">
+
+                <p>
+                    📞 0912 345 6789
+                </p>
+
+                <p>
+                    ✉ kaontae@gmail.com
+                </p>
+
+                <p>
+                    📍Cambaro, Mandaue City
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+<script
+    src="{{ url_for('static', filename='js/gallery.js') }}">
+</script>
+{% endblock %}

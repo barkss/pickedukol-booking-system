@@ -1,0 +1,1925 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5e91f;
+}
+
+
+/* =========================================
+   LANDING PAGE
+========================================= */
+
+.landing-page .hero-content p {
+    color: #000;
+
+    -webkit-text-stroke: 1px white;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 20;
+
+    padding: 28px 65px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 65px;
+}
+
+.nav-links a {
+    color: #111;
+    text-decoration: none;
+
+    font-family: Impact, Haettenschweiler, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 56vh;
+
+    overflow: hidden;
+}
+
+
+/* Background image */
+
+.hero-image {
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("../images/court-background.jpg");
+
+    background-size: cover;
+    background-position: center 30%;
+
+    filter: saturate(0.8);
+}
+
+
+/* Purple outline around title */
+
+.hero-content {
+    position: absolute;
+
+    left: 14%;
+    right: 14%;
+    top: 18%;
+
+    border: 2px solid #7d43ff;
+
+    padding: 25px 10px 45px;
+
+    z-index: 5;
+}
+
+
+/* Main title */
+
+.hero-content h1 {
+    text-align: center;
+
+    font-family: Impact, Haettenschweiler, sans-serif;
+
+    font-size: clamp(80px, 14vw, 220px);
+
+    line-height: 0.9;
+
+    color: #050505;
+
+    -webkit-text-stroke: 2px white;
+
+    letter-spacing: -4px;
+
+    white-space: nowrap;
+}
+
+
+/* Subtitle */
+
+.hero-content p {
+    margin-top: 10px;
+
+    padding-left: 10px;
+
+    font-size: clamp(18px, 2vw, 30px);
+
+    color: #050505;
+
+    -webkit-text-stroke: 1px white;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   BOOKING SECTION
+========================================= */
+
+.booking-section {
+    position: relative;
+
+    height: 44vh;
+
+    background: #f5e91f;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================
+   BOOK BUTTON
+========================================= */
+
+.book-button {
+    position: relative;
+
+    z-index: 10;
+
+    width: min(530px, 70vw);
+    height: 140px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border: 2px solid #111;
+
+    border-radius: 80px;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-family: Impact, Haettenschweiler, sans-serif;
+
+    font-size: clamp(40px, 5vw, 70px);
+
+    letter-spacing: 1px;
+
+    box-shadow: 0 14px 0 #111;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+
+.book-button:hover {
+    transform: translateY(5px);
+
+    box-shadow: 0 9px 0 #111;
+}
+
+
+.book-button:active {
+    transform: translateY(12px);
+
+    box-shadow: 0 2px 0 #111;
+}
+
+
+/* =========================================
+   HORIZONTAL LINE
+========================================= */
+
+.booking-line {
+    position: absolute;
+
+    left: 6%;
+
+    width: 28%;
+
+    height: 3px;
+
+    background: #111;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.arrow {
+    position: absolute;
+
+    left: 5%;
+
+    bottom: 7%;
+
+    font-size: 95px;
+
+    font-weight: 900;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   PICKLEBALL
+========================================= */
+
+.pickleball {
+    position: absolute;
+
+    right: 7%;
+    top: -18%;
+
+    width: 300px;
+    height: 300px;
+
+    background: #ff9b1c;
+
+    border-radius: 50%;
+
+    z-index: 5;
+}
+
+
+/* Holes */
+
+.pickleball-hole {
+    position: absolute;
+
+    width: 35px;
+    height: 20px;
+
+    background: #f5e91f;
+
+    border-radius: 50%;
+
+    transform: rotate(25deg);
+}
+
+
+.hole-1 {
+    top: 35px;
+    left: 105px;
+}
+
+
+.hole-2 {
+    top: 90px;
+    right: 40px;
+
+    transform: rotate(60deg);
+}
+
+
+.hole-3 {
+    top: 145px;
+    right: 95px;
+
+    transform: rotate(35deg);
+}
+
+
+.hole-4 {
+    bottom: 50px;
+    right: 55px;
+
+    transform: rotate(-35deg);
+}
+
+
+.hole-5 {
+    bottom: 40px;
+    left: 100px;
+
+    transform: rotate(10deg);
+}
+
+
+.hole-6 {
+    top: 120px;
+    left: 25px;
+
+    transform: rotate(-70deg);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero {
+        height: 52vh;
+    }
+
+    .hero-content {
+        left: 5%;
+        right: 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 18vw;
+        letter-spacing: -2px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .pickleball {
+        width: 180px;
+        height: 180px;
+
+        right: -20px;
+        top: -10%;
+    }
+
+    .book-button {
+        height: 100px;
+    }
+
+    .booking-line {
+        width: 20%;
+    }
+
+    .arrow {
+        font-size: 65px;
+    }
+}
+/* =========================================
+   SMOOTH NAVIGATION
+========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =========================================
+   LANDING PAGE SECTIONS
+========================================= */
+
+.about-section,
+.gallery-section,
+.contact-section {
+    min-height: 100vh;
+
+    padding: 120px 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.section-content {
+    width: 100%;
+    max-width: 900px;
+}
+
+
+.section-label {
+    font-family: Impact, Haettenschweiler, sans-serif;
+
+    font-size: 20px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-section {
+    background: #f5e91f;
+
+    color: #111;
+}
+
+
+.about-section h2,
+.gallery-section h2,
+.contact-section h2 {
+
+    font-family: Impact, Haettenschweiler, sans-serif;
+
+    font-size: clamp(55px, 8vw, 120px);
+
+    line-height: 0.9;
+
+    margin: 20px 0 35px;
+}
+
+
+.about-section .section-content > p:last-child,
+.contact-section .section-content > p {
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    max-width: 700px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.gallery-section {
+
+    min-height: 100vh;
+
+    background: #111;
+
+    color: white;
+
+    padding: 120px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.gallery-section .section-content {
+
+    width: 100%;
+
+    max-width: 1200px;
+}
+
+
+.landing-page .gallery-section h2 {
+    color: #000;
+
+    -webkit-text-stroke: 1px white;
+}
+
+/* =========================================
+   GALLERY SLIDER
+========================================= */
+
+.gallery-slider {
+
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   IMAGE CONTAINER
+========================================= */
+
+.gallery-image-container {
+
+    width: min(900px, 75vw);
+
+    height: 550px;
+
+    overflow: hidden;
+
+    border: 3px solid white;
+
+    background: #222;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.gallery-image-container img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* =========================================
+   ARROWS
+========================================= */
+
+.gallery-arrow {
+
+    width: 65px;
+
+    height: 65px;
+
+    flex-shrink: 0;
+
+    border: 2px solid white;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.gallery-arrow:hover {
+
+    background: white;
+
+    color: #111;
+
+    transform: scale(1.08);
+}
+
+
+.gallery-arrow:active {
+
+    transform: scale(0.95);
+}
+
+
+/* =========================================
+   DOTS
+========================================= */
+
+.gallery-dots {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+.gallery-dot {
+
+    width: 12px;
+
+    height: 12px;
+
+    padding: 0;
+
+    border: 2px solid white;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+.gallery-dot.active {
+
+    background: white;
+
+    transform: scale(1.2);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .gallery-slider {
+
+        gap: 10px;
+    }
+
+
+    .gallery-image-container {
+
+        width: 70vw;
+
+        height: 400px;
+    }
+
+
+    .gallery-arrow {
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 25px;
+    }
+
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+
+    background: #f5e91f;
+
+    color: #111;
+}
+
+
+.contact-info {
+
+    margin-top: 40px;
+}
+
+
+.contact-info p {
+
+    margin: 15px auto;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    z-index: 100;
+
+    padding: 28px 65px;
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 65px;
+}
+
+
+.nav-links a {
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-family: Impact, Haettenschweiler, sans-serif;
+
+    font-size: 20px;
+
+    letter-spacing: 1px;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.nav-links a:hover {
+
+    opacity: 0.5;
+}
+/* =========================================================
+   PICKEDUKOL COURTS PAGE
+   ISOLATED — DOES NOT MODIFY LANDING PAGE
+========================================================= */
+
+.courts-page {
+    width: 100%;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    padding: 105px 30px 45px;
+
+    background: #f5f6f8;
+
+    color: #1d2940;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   DATE BAR
+========================================================= */
+
+.courts-page .courts-date-bar {
+    width: 100%;
+    max-width: 1080px;
+
+    margin: 0 auto 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.courts-page .courts-date {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 14px;
+}
+
+.courts-page .courts-calendar {
+    font-size: 13px;
+}
+
+.courts-page .courts-today {
+    padding: 3px 7px;
+
+    background: #142f83;
+
+    color: white;
+
+    border-radius: 8px;
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+.courts-page .courts-date-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.courts-page .courts-date-arrow,
+.courts-page .courts-calendar-button {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid #dfe3e9;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    color: #26334b;
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+.courts-page .courts-date-arrow:hover,
+.courts-page .courts-calendar-button:hover {
+    background: #edf0f4;
+}
+
+
+/* =========================================================
+   COURT TYPE TABS
+========================================================= */
+
+.courts-page .courts-type-tabs {
+    width: 100%;
+    max-width: 1080px;
+
+    margin: 0 auto 12px;
+
+    padding: 3px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 3px;
+
+    box-sizing: border-box;
+
+    background: #e6e9ee;
+
+    border-radius: 6px;
+}
+
+.courts-page .courts-type {
+    border: 0;
+
+    border-radius: 5px;
+
+    padding: 9px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.courts-page .courts-type.active {
+    background: #ffffff;
+
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.courts-page .courts-type-name {
+    display: block;
+
+    color: #1c2740;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.courts-page .courts-type-price {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #4161a4;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   MAIN BOOKING CARD
+========================================================= */
+
+.courts-page .courts-booking-card {
+    width: 100%;
+    max-width: 1080px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe3e8;
+
+    border-radius: 6px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.courts-page .courts-table-header {
+    display: grid;
+
+    grid-template-columns: 155px 1fr 1fr;
+
+    background: #eef0f3;
+
+    border-bottom: 1px solid #d9dde3;
+}
+
+.courts-page .courts-time-header {
+    padding: 10px;
+
+    font-size: 10px;
+
+    color: #586477;
+}
+
+.courts-page .courts-court-header {
+    padding: 9px;
+
+    text-align: center;
+
+    border-left: 1px solid #dce0e5;
+}
+
+.courts-page .courts-court-header strong {
+    display: block;
+
+    font-size: 10px;
+
+    color: #1c2740;
+}
+
+.courts-page .courts-court-header span {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 8px;
+
+    color: #687489;
+}
+
+
+/* =========================================================
+   PERIOD
+========================================================= */
+
+.courts-page .courts-period {
+    padding: 7px 10px;
+
+    background: #f0f1f3;
+
+    border-bottom: 1px solid #e0e3e7;
+
+    color: #667084;
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   TIME ROW
+========================================================= */
+
+.courts-page .courts-slot-row {
+    display: grid;
+
+    grid-template-columns: 155px 1fr 1fr;
+
+    min-height: 54px;
+
+    border-bottom: 1px solid #e2e5e9;
+}
+
+.courts-page .courts-time {
+    padding: 7px 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #fffdf7;
+}
+
+.courts-page .courts-time strong {
+    font-size: 9px;
+
+    font-weight: 500;
+
+    color: #26334b;
+}
+
+.courts-page .courts-time span {
+    margin-top: 2px;
+
+    font-size: 8px;
+
+    color: #4161a4;
+}
+
+
+/* =========================================================
+   BOOKING BUTTONS
+========================================================= */
+
+.courts-page .courts-slot {
+    width: calc(100% - 8px);
+
+    min-height: 38px;
+
+    margin: 7px 4px;
+
+    border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border 0.15s ease,
+        transform 0.15s ease;
+}
+
+
+/* AVAILABLE */
+
+.courts-page .courts-slot.available {
+    background: #f3f4f7;
+
+    border: 1px solid #e0e3e8;
+
+    color: #385478;
+}
+
+.courts-page .courts-slot.available:hover {
+    background: #e8ebf0;
+
+    border-color: #b8c0cc;
+
+    transform: translateY(-1px);
+}
+
+
+/* SELECTED */
+
+.courts-page .courts-slot.selected {
+    background: #142f83;
+
+    border: 1px solid #142f83;
+
+    color: white;
+}
+
+
+/* BOOKED */
+
+.courts-page .courts-slot.booked {
+    background: #dfe5ed;
+
+    border: 1px solid #dfe5ed;
+
+    color: #3b526c;
+
+    cursor: not-allowed;
+}
+
+
+/* UNAVAILABLE */
+
+.courts-page .courts-slot.unavailable {
+    background: #f8dddd;
+
+    border: 1px solid #f0caca;
+
+    color: #cf3333;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   LEGEND
+========================================================= */
+
+.courts-page .courts-legend {
+    width: 100%;
+    max-width: 1080px;
+
+    margin: 12px auto 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    font-size: 8px;
+
+    color: #687489;
+}
+
+.courts-page .courts-legend span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+.courts-page .courts-legend i {
+    width: 8px;
+    height: 8px;
+
+    display: inline-block;
+
+    border-radius: 2px;
+
+    box-sizing: border-box;
+}
+
+.courts-page .legend-available {
+    background: #f3f4f7;
+
+    border: 1px solid #d9dde3;
+}
+
+.courts-page .legend-selected {
+    background: #142f83;
+}
+
+.courts-page .legend-booked {
+    background: #dfe5ed;
+}
+
+.courts-page .legend-unavailable {
+    background: #f8dddd;
+
+    border: 1px solid #f0caca;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .courts-page {
+        padding: 90px 8px 30px;
+    }
+
+    .courts-page .courts-table-header,
+    .courts-page .courts-slot-row {
+        grid-template-columns: 105px 1fr 1fr;
+    }
+
+    .courts-page .courts-time {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .courts-page .courts-time strong {
+        font-size: 8px;
+    }
+
+    .courts-page .courts-time span {
+        font-size: 7px;
+    }
+
+    .courts-page .courts-court-header strong {
+        font-size: 8px;
+    }
+
+    .courts-page .courts-court-header span {
+        font-size: 7px;
+    }
+
+    .courts-page .courts-slot {
+        font-size: 8px;
+    }
+}
+
+/* =========================================================
+   COURTS PAGE
+   ========================================================= */
+
+.courts-page {
+    width: 100%;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    padding: 70px 5% 60px;
+
+    display: grid;
+
+    grid-template-columns: 36% 64%;
+
+    align-items: center;
+
+    gap: 4%;
+
+    background: #f3ff00;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   LEFT INFORMATION
+   ========================================================= */
+
+.court-info {
+    position: relative;
+
+    min-height: 650px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+}
+
+
+/* BIG WHITE SHAPE */
+
+.court-info::before {
+    content: "";
+
+    position: absolute;
+
+    width: 620px;
+    height: 620px;
+
+    border-radius: 50%;
+
+    background: #fffdf0;
+
+    left: -260px;
+    top: -180px;
+
+    z-index: 0;
+}
+
+
+/* IMAGE */
+
+.court-image-wrapper {
+    width: 100%;
+
+    max-width: 400px;
+
+    height: 320px;
+
+    position: relative;
+
+    z-index: 2;
+
+    border: 2px solid #7447ff;
+
+    overflow: hidden;
+}
+
+.court-main-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* TITLE */
+
+.court-info h1 {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 10px 0 25px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    color: #000;
+}
+
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.court-location {
+    width: 200px;
+
+    height: 200px;
+
+    position: relative;
+
+    z-index: 2;
+
+    border: 1px solid #000;
+
+    background: #ffffff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.location-icon {
+    font-size: 50px;
+
+    line-height: 1;
+
+    color: #000;
+
+    transform: scaleX(.75);
+}
+
+
+.location-text {
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #111;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   ARROW
+   ========================================================= */
+
+.court-arrow {
+    position: absolute;
+
+    left: -20px;
+
+    bottom: -5px;
+
+    z-index: 3;
+
+    font-size: 120px;
+
+    line-height: 1;
+
+    font-weight: 300;
+
+    color: #ffffff;
+
+    transform: rotate(0deg);
+}
+
+
+/* =========================================================
+   RIGHT BOOKING SECTION
+   ========================================================= */
+
+.court-booking {
+    width: 100%;
+
+    max-width: 900px;
+
+    position: relative;
+
+    z-index: 5;
+
+    background: #f4f5f7;
+
+    padding: 50px 45px 45px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DATE
+   ========================================================= */
+
+.court-date-navigation {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+
+.court-nav-button {
+    width: 32px;
+    height: 32px;
+
+    border: 1px solid #d8dce2;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    color: #26344b;
+}
+
+
+.court-date {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 11px;
+
+    color: #17213a;
+}
+
+
+.court-date small {
+    padding: 3px 6px;
+
+    background: #142f83;
+
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    font-size: 7px;
+}
+
+
+/* =========================================================
+   COURT TYPE
+   ========================================================= */
+
+.court-type-tabs {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 3px;
+
+    margin-bottom: 12px;
+
+    padding: 3px;
+
+    background: #e5e7eb;
+}
+
+
+.court-type {
+    padding: 9px;
+
+    border: 0;
+
+    background: #f1f2f4;
+
+    cursor: pointer;
+}
+
+
+.court-type.active {
+    background: #ffffff;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+
+
+.court-type strong {
+    display: block;
+
+    font-size: 10px;
+
+    color: #17213a;
+}
+
+
+.court-type span {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 7px;
+
+    color: #4161a4;
+}
+
+
+/* =========================================================
+   SCHEDULE
+   ========================================================= */
+
+.court-schedule {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #dce0e5;
+
+    overflow: hidden;
+}
+
+
+/* HEADER */
+
+.schedule-header {
+    display: grid;
+
+    grid-template-columns: 100px 1fr 1fr;
+
+    background: #eef0f3;
+
+    border-bottom: 1px solid #dce0e5;
+}
+
+
+.schedule-header > div {
+    padding: 9px;
+
+    font-size: 9px;
+
+    color: #4e5b70;
+}
+
+
+.schedule-header > div:not(:first-child) {
+    text-align: center;
+
+    border-left: 1px solid #dce0e5;
+}
+
+
+.schedule-header strong {
+    display: block;
+
+    color: #1b2740;
+
+    font-size: 9px;
+}
+
+
+.schedule-header small {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 6px;
+
+    color: #657188;
+}
+
+
+/* PERIOD */
+
+.schedule-period {
+    padding: 6px 8px;
+
+    background: #eef0f3;
+
+    border-bottom: 1px solid #dce0e5;
+
+    font-size: 7px;
+
+    color: #667084;
+}
+
+
+/* ROW */
+
+.schedule-row {
+    display: grid;
+
+    grid-template-columns: 100px 1fr 1fr;
+
+    min-height: 43px;
+
+    border-bottom: 1px solid #e1e4e8;
+}
+
+
+/* TIME */
+
+.schedule-time {
+    padding: 5px 7px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background: #fffdf8;
+}
+
+
+.schedule-time strong {
+    font-size: 7px;
+
+    font-weight: 500;
+
+    color: #26334b;
+}
+
+
+.schedule-time span {
+    margin-top: 2px;
+
+    font-size: 6px;
+
+    color: #31559a;
+}
+
+
+/* SLOT */
+
+.schedule-slot {
+    margin: 4px;
+
+    border-radius: 4px;
+
+    border: 1px solid transparent;
+
+    font-size: 7px;
+
+    cursor: pointer;
+}
+
+
+/* AVAILABLE */
+
+.schedule-slot.available {
+    background: #f0f2f5;
+
+    border-color: #dce1e7;
+
+    color: #3c5778;
+}
+
+
+.schedule-slot.available:hover {
+    background: #e5e9ee;
+}
+
+
+/* BOOKED */
+
+.schedule-slot.booked {
+    background: #dce3eb;
+
+    border-color: #dce3eb;
+
+    color: #41566f;
+
+    cursor: not-allowed;
+}
+
+
+/* UNAVAILABLE */
+
+.schedule-slot.unavailable {
+    background: #f7dada;
+
+    border-color: #efc9c9;
+
+    color: #d03434;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   LEGEND
+   ========================================================= */
+
+.schedule-legend {
+    padding: 9px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    font-size: 6px;
+
+    color: #657188;
+}
+
+
+.schedule-legend span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+}
+
+
+.legend {
+    width: 7px;
+    height: 7px;
+
+    display: inline-block;
+
+    border-radius: 2px;
+}
+
+
+.legend.available {
+    background: #f0f2f5;
+
+    border: 1px solid #dce1e7;
+}
+
+
+.legend.selected {
+    background: #142f83;
+}
+
+
+.legend.booked {
+    background: #dce3eb;
+}
+
+
+.legend.unavailable {
+    background: #f7dada;
+
+    border: 1px solid #efc9c9;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .courts-page {
+        grid-template-columns: 1fr;
+
+        padding: 100px 25px 50px;
+
+        gap: 40px;
+    }
+
+    .court-info {
+        min-height: auto;
+
+        align-items: center;
+    }
+
+    .court-info::before {
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        top: -150px;
+    }
+
+    .court-info h1 {
+        text-align: center;
+    }
+
+    .court-location {
+        align-self: center;
+    }
+
+    .court-arrow {
+        display: none;
+    }
+
+    .court-booking {
+        max-width: 100%;
+
+        padding: 30px 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .courts-page {
+        padding: 80px 10px 30px;
+    }
+
+    .court-image-wrapper {
+        height: 280px;
+    }
+
+    .court-info h1 {
+        font-size: 24px;
+    }
+
+    .court-booking {
+        padding: 20px 8px;
+    }
+
+    .schedule-header,
+    .schedule-row {
+        grid-template-columns: 80px 1fr 1fr;
+    }
+
+    .schedule-time strong {
+        font-size: 6px;
+    }
+
+    .schedule-slot {
+        font-size: 6px;
+    }
+}
