@@ -1,0 +1,343 @@
+{% extends "base.html" %}
+
+{% block title %}PICKEDUKOL | Courts{% endblock %}
+
+{% block content %}
+
+<div class="courts-page">
+
+    <!-- LEFT SIDE -->
+    <section class="court-info">
+
+        <div class="court-image-wrapper">
+            <img
+                src="{{ url_for('static', filename='images/court.jpg') }}"
+                alt="Pickleball Court"
+                class="court-main-image"
+            >
+        </div>
+
+        <h1>hawan pickleball court</h1>
+
+
+        <!-- LOCATION -->
+        <div class="court-location">
+
+            <div class="location-icon">
+                ●
+            </div>
+
+            <div class="location-text">
+                MANDAUE CITY CEBU
+            </div>
+
+        </div>
+
+
+        <!-- ARROW -->
+        <div class="court-arrow">
+            ↗
+        </div>
+
+    </section>
+
+
+    <!-- RIGHT SIDE -->
+    <section class="court-booking">
+
+        <!-- DATE -->
+        <div class="court-date-navigation">
+
+            <button class="court-nav-button">
+                ‹
+            </button>
+
+            <div class="court-date">
+
+                <span>▣</span>
+
+                <strong>
+                    Wed, Aug 26
+                </strong>
+
+                <small>
+                    Today
+                </small>
+
+            </div>
+
+            <button class="court-nav-button">
+                ›
+            </button>
+
+        </div>
+
+
+        <!-- COURT TYPE -->
+        <div class="court-type-tabs">
+
+            <button class="court-type active">
+
+                <strong>
+                    VIP COURT
+                </strong>
+
+                <span>
+                    from ₱415/hr
+                </span>
+
+            </button>
+
+            <button class="court-type">
+
+                <strong>
+                    REGULAR COURTS
+                </strong>
+
+                <span>
+                    from ₱315/hr
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <!-- BOOKING TABLE -->
+        <div class="court-schedule">
+
+            <!-- HEADER -->
+            <div class="schedule-header">
+
+                <div>
+                    Time
+                </div>
+
+                <div>
+                    <strong>Court 1</strong>
+                    <small>VIP COURT</small>
+                </div>
+
+                <div>
+                    <strong>Court 2</strong>
+                    <small>REGULAR COURT</small>
+                </div>
+
+            </div>
+
+
+            <!-- AFTERNOON -->
+            <div class="schedule-period">
+                Afternoon
+            </div>
+
+
+            <!-- 1 -->
+            <div class="schedule-row">
+
+                <div class="schedule-time">
+                    <strong>1:00 → 2:00 PM</strong>
+                    <span>₱415</span>
+                </div>
+
+                <button class="schedule-slot available">
+                    Available
+                </button>
+
+                <button class="schedule-slot available">
+                    Available
+                </button>
+
+            </div>
+
+
+            <!-- 2 -->
+            <div class="schedule-row">
+
+                <div class="schedule-time">
+                    <strong>2:00 → 3:00 PM</strong>
+                    <span>₱415</span>
+                </div>
+
+                <button class="schedule-slot unavailable">
+                    Unavailable
+                </button>
+
+                <button class="schedule-slot available">
+                    Available
+                </button>
+
+            </div>
+
+
+            <!-- 3 -->
+            <div class="schedule-row">
+
+                <div class="schedule-time">
+                    <strong>3:00 → 4:00 PM</strong>
+                    <span>₱415</span>
+                </div>
+
+                <button class="schedule-slot available">
+                    Available
+                </button>
+
+                <button class="schedule-slot booked">
+                    Booked
+                </button>
+
+            </div>
+
+
+            <!-- 4 -->
+            <div class="schedule-row">
+
+                <div class="schedule-time">
+                    <strong>4:00 → 5:00 PM</strong>
+                    <span>₱415</span>
+                </div>
+
+                <button class="schedule-slot available">
+                    Available
+                </button>
+
+                <button class="schedule-slot available">
+                    Available
+                </button>
+
+            </div>
+
+
+            <!-- 5 -->
+            <div class="schedule-row">
+
+                <div class="schedule-time">
+                    <strong>5:00 → 6:00 PM</strong>
+                    <span>₱415</span>
+                </div>
+
+                <button class="schedule-slot booked">
+                    Booked
+                </button>
+
+                <button class="schedule-slot available">
+                    Available
+                </button>
+
+            </div>
+
+
+            <!-- EVENING -->
+            <div class="schedule-period">
+                Evening
+            </div>
+
+
+            <!-- 6 -->
+            <div class="schedule-row">
+
+                <div class="schedule-time">
+                    <strong>6:00 → 7:00 PM</strong>
+                    <span>₱415</span>
+                </div>
+
+                <button class="schedule-slot booked">
+                    Booked
+                </button>
+
+                <button class="schedule-slot booked">
+                    Booked
+                </button>
+
+            </div>
+
+
+            <!-- 7 -->
+            <div class="schedule-row">
+
+                <div class="schedule-time">
+                    <strong>7:00 → 8:00 PM</strong>
+                    <span>₱415</span>
+                </div>
+
+                <button class="schedule-slot available">
+                    Available
+                </button>
+
+                <button class="schedule-slot booked">
+                    Booked
+                </button>
+
+            </div>
+
+
+            <!-- 8 -->
+            <div class="schedule-row">
+
+                <div class="schedule-time">
+                    <strong>8:00 → 9:00 PM</strong>
+                    <span>₱415</span>
+                </div>
+
+                <button class="schedule-slot available">
+                    Available
+                </button>
+
+                <button class="schedule-slot available">
+                    Available
+                </button>
+
+            </div>
+
+
+            <!-- 9 -->
+            <div class="schedule-row">
+
+                <div class="schedule-time">
+                    <strong>9:00 → 10:00 PM</strong>
+                    <span>₱415</span>
+                </div>
+
+                <button class="schedule-slot booked">
+                    Booked
+                </button>
+
+                <button class="schedule-slot available">
+                    Available
+                </button>
+
+            </div>
+
+
+            <!-- LEGEND -->
+            <div class="schedule-legend">
+
+                <span>
+                    <i class="legend available"></i>
+                    Available
+                </span>
+
+                <span>
+                    <i class="legend selected"></i>
+                    Selected
+                </span>
+
+                <span>
+                    <i class="legend booked"></i>
+                    Booked
+                </span>
+
+                <span>
+                    <i class="legend unavailable"></i>
+                    Unavailable
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+{% endblock %}
